@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>HR & Payroll Implementation and Optimization for Small and Mid-size Organizations</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/vendors/bootstrap/bootstrap-reboot.min.css" rel="stylesheet" />
+        <link href="assets/vendors/bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="assets/vendors/bootstrap/bootstrap-utilities.min.css" rel="stylesheet" />
+        <link href="assets/vendors/owlcarousel/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/vendors/nouislider/nouislider.min.css" rel="stylesheet" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Icons -->
+        <link href="assets/fonts/moria-icons/style.css" rel="stylesheet" />
+
+        <!-- Main CSS -->
+        <link href="assets/dist/main.min.css" rel="stylesheet" />
+        <link href="assets/dist/responsive.min.css" rel="stylesheet" />
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="border-end border-primary pe-3">
+                                <a href="https://maps.app.goo.gl/qWF5M6LNWUZWaebE7" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                            </div>
+                            <div class="ps-3">
+                                <a href="info@hr1systems.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>info@hr1systems.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-primary pe-3">
+                                <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/profile.php?id=100041166143576"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://twitter.com/HR1Systems"><i class="fab fa-twitter"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://instagram.com/hr1systems?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-0" href="https://www.linkedin.com/company/hr1systems/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light"> 
+                    <a href="index.html" class="navbar-brand p-0">
+                        
+                         <img src="img/HR1 WHITE ON BLUE.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link active" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">About</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="our story.html" class="dropdown-item">Our story</a>
+                                    <a href="Speaking events.html" class="dropdown-item">Speaking Events</a>
+                                    <a href="our story.html" class="dropdown-item">Partnerships</a>
+                                    <a href="https://hr1systems.zohorecruit.com/jobs/Careers" class="dropdown-item">Careers</a>
+
+                                    
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Services</span>
+                                </a>
+                                <div class="dropdown-menu">    
+                                    <a href="service1.html" class="dropdown-item">Implementation Services</a>
+                                    <a href="service.html" class="dropdown-item">Small Business Solution</a>
+
+                                </div>
+                            </div>    
+                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Resources</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="https://councils.forbes.com/profile/Alexander-Ali-Dalipi-CEO-HR1Systems-LLC/1178a87d-0810-4793-838f-fa40e6c64285" class="dropdown-item">Forbes HR Council</a>
+                                    <a href="Lehman college.html" class="dropdown-item">Lehman College</a>
+                                    <a href="Baruch college.html" class="dropdown-item">Baruch College</a>
+                                    
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <div class="nav-btn px-3">
+                                <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                            <i class="fa fa-phone-alt fa-2x"></i>
+                            <div class="position-absolute" style="top: 7px; right: 12px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column ms-3">
+                            <span>Call to Our Experts</span>
+                            <a href="tel:+1 917 473 3545"><span class="text-dark">Free: +1 917 473 3545</span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100 h-50" src="Website Design/Speaking Events Webpage Banner Design - Desktop.png" alt="Image">
+                    <div class="carousel-caption1">
+                        <div class="container">
+                            <div class="row justify-content-right">
+                                <div class="col-lg-10 text-start">
+                                   <h1 class="display-3 text-white mb-5 animated slideInRight">Speaking Events </h1> 
+                                   <h4 class="fw-bolder text-white mb-2 animated slideInRight">Alexander-Ali Dalipi 
+                                   </br>Doctoral Student, MSHRD, PHR </h4> 
+
+                                   <p class="fs-5 fw-medium text-white text-uppercase animated slideInRight">CEO & Founder, HR1Systems</p>     
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
+                
+                <div class="row g-4">
+                    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s">
+                        
+                        <div class='embed-container'><iframe src='https://www.youtube.com/embed//tg__SL-v6-M' frameborder='0' allowfullscreen></iframe></div>
+
+
+
+                                                                                
+                    </div>
+                    
+                </div>
+                <div class="text-center mx-auto pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width:1200px;">
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="https://forms.zohopublic.com/hr1systems/form/RequesttoSpeakForm/formperma/pEY02mSE3XCvOonfq3l7KmeGAVUhjersDcdkNJDoJOQ">Request to Speak</a>
+
+                    <p class="mb-0 pt-5">For over 20 years, Alexander-Ali Dalipi has been at the forefront of human resources and payroll, expertly guiding companies through all facets of HR and payroll operations. Known for his strategic vision, Alexander-Ali has masterfully designed and implemented human resource and payroll systems, significantly enhancing departmental efficiency and effectiveness. His leadership and innovative restructuring have consistently driven organizational success, making him a leader in the industry. 
+
+                        Alexander-Ali is currently pursuing his Doctorate of Education in Organizational Leadership, Development, and Change (EDOL) at Lehman College and holds a Master's degree in Human Resources Development from Villanova University. Alexander-Ali is renowned for his expertise in HR information systems, payroll, AI, and data analytics. He has been invited to be a keynote speaker at prestigious events such as the Statewide HR and Payroll Conference, DisruptHR, the State Chamber of Commerce, and SHRM conferences and events. In addition to being a keynote speaker, guest lecturer, and panelist, Alexander-Ali is now entering the world of podcasts with "When Worlds Unite: HR & AI." He is currently recognized as a thought leader in HR and payroll as an exclusive member of the Forbes HR Council. Alexander-Ali has also received several awards for his volunteer services with various organizations. His certifications include PHR, SHRM-CP, and National Payroll Compliance, as well as Data Analytics from IBM. 
+                        
+                        Alexander-Ali is the CEO and Founder of HR1Systems, a boutique firm since 2017, providing full client-side implementation and strategic managed services supporting small to midsize companies in HR and payroll operations. HR1Systems is a certified trusted partner.
+                        
+                        Alexander-Ali successfully developed his reputation and brand as a leading subject matter expert in the HR information systems and payroll industry. As Chief Executive Officer (CEO) of HR1Systems, he has cultivated client and vendor relationships while also developing a reputable portfolio. </p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex border-end border-primary pe-3">
+                            <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/profile.php?id=100041166143576"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn p-0 text-primary me-3" href="https://twitter.com/HR1Systems"><i class="fab fa-twitter"></i></a>
+                            <a class="btn p-0 text-primary me-3" href="https://instagram.com/hr1systems?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                            <a class="btn p-0 text-primary me-0" href="https://www.linkedin.com/company/hr1systems/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+        <!-- Testimonial Start -->
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h2>Happy Clients</h2>
+    
+                            <div class="section-borders">
+                                <span></span>
+                                <span class="black-border"></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="owl-carousel client-testimonial-carousel">
+                            <div class="single-testimonial-item">
+                                <p>"I think I love most about this event is you made it easy and you made it simple, and relatable, understandable, and most importantly practical, and that is what I really appreciate about you and about everything that you bring to UKG into this event that we have."</p>
+                                <h3>Amanda Nichols<span>Account Executive, UKG</span></h3>
+                            </div>
+                            <div class="single-testimonial-item">
+                                <p>“I learned so much about HR. I have no idea what HR did, but with your presentation, now I got to understand it”</p>
+                                <h3>Melissa G. Andrieux <span>Esq, Chief Diversity Officer, Dorf Nelson & Zauderer LLP </span></h3>
+                            </div>
+                            <div class="single-testimonial-item">
+                                <p>“I was about data I wasn't sure if I'd love it or not but you broke it down so everyone enjoyed it.”.</p>
+                                <h3>Nick Joseph<span> Account Executive, UKG  </span></h3>
+                            </div>
+                           
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Testimonial End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid bg-light about pb-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-4 mb-4">Invite Alexander-Ali to Speak at Your Next Event!</h1>
+                            <p>
+                                Are you planning an event and looking for a dynamic and insightful speaker? Alexander-Ali Dalipi, known for his passion and expertise in HR, payroll, AI, and data analytics, is available to bring his unique perspectives and engaging presentations to your audience.
+                            </p>
+                            <h4 class="text-primary">Signature Presentations:</h4>
+
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Storytelling Through Data Visualization</p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>When Worlds Unite: Human Willpower through AI Partnership</p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>An HR Conversation with AI</p>
+                            <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Advancing the Narrative: New Conversations in HR</p>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="https://forms.zohopublic.com/hr1systems/form/RequesttoSpeakForm/formperma/pEY02mSE3XCvOonfq3l7KmeGAVUhjersDcdkNJDoJOQ">Request to speak</a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                        <div class="about-item-content bg-white rounded p-5 h-100 responsive-image1">
+                            <img src="Website Design/Speaking Events - Request to Speak ZOHO Form QR Code.png" class="img-fluid w-100 h-75 responsive-image1" alt="">
+                            <h4 class="text-primary">Scan this QR code to access the Request to Speak Form</h4>
+    
+                            
+                            <style>
+                                .responsive-image1 {
+                                  display: none; /* Hide image by default (on mobile) */
+                                }
+                              
+                                @media (min-width: 768px) {
+                                  .responsive-image1 {
+                                    display: block; /* Show image on medium and larger screens */
+                                  }
+                                }
+                              </style>
+                    
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
+        </div>
+        <!-- About End -->
+        <!-- events Start -->
+        <div class="container-fluid  about pb-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    
+                    <div style="  padding :20px; display: flex; justify-content: center; align-items: center; background-color: rgb(39, 109, 240) "><h4 class="text-white display-1">Upcoming Events</h4></div> 
+
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                       <div class="about-item-content bg-white rounded p-5 h-100 responsive-image1">
+                            
+    
+                            
+                            <style>
+                                .responsive-image1 {
+                                  display: none; /* Hide image by default (on mobile) */
+                                }
+                              
+                                @media (min-width: 768px) {
+                                  .responsive-image1 {
+                                    display: block; /* Show image on medium and larger screens */
+                                  }
+                                }
+                              </style>
+                    
+                        </div>
+                    </div>  
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-5 mb-4">36th Annual Carolinas Payroll Conference</h1>
+                            <P style="text-align: center; color: cornflowerblue;">November 6-9, 2024</P>
+                            <P style="text-align: center; color: cornflowerblue;">Embassy Suites by Hilton Myrtle Beach Oceanfront Resort</P>
+                            <P style="text-align: center; color: cornflowerblue;">9800 Queensway Boulevard - Myrtle Beach, SC 29572</P>
+
+                            <h4>
+                                HR1Systems is excited to be a Bronze Sponsor for the 36th Annual Carolinas Payroll Conference, a leading event that brings together payroll professionals from across the region to explore the latest trends, innovations, and best practices in payroll.                 
+                            </h4>
+
+                            <p class="text-dark pt-5">Our support and participation in this conference reflect our ongoing commitment to advancing the payroll profession and providing resources that empower industry leaders.</p>
+                            <p class="text-dark">We are also pleased to announce that our CEO, Alexander-Ali Dalipi, will be delivering an afternoon keynote session on Thursday, November 7th, from 1:30 PM - 3:00 PM, focusing on Storytelling Through Data Visualization. Attendees will learn how to transform complex payroll data into powerful stories that drive business success and effective decision-making.</p>
+                            <p class="text-dark mb-4">In addition, HR1Systems is proud to sponsor a keynote presentation by Scott Prendergast —a Professional Speaker, Author, Life Coach, and Mental Health Advocate. Scott’s session will cover the critical topic of "Imperfect Leader: Learning to Lead Authentically Through Emotional Intelligence " providing actionable strategies to support employee well-being and foster a healthy work environment.</p>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="https://carolinaspayrollconference.org/index.php">Register now</a>
+
+                        </div>
+                    </div> 
+
+
+                    <div style="  padding :20px; display: flex; justify-content: center; align-items: center; background-color: rgb(39, 109, 240); "><h4 class="text-white display-1">Past Events</h4></div> 
+
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                       <div class="about-item-content bg-white rounded p-5 h-100 ">
+                            
+                        <img src="img/lh.jfif" class="img-fluid w-100 h-75 " alt="">
+
+                            
+                            <style>
+                                .responsive-image1 {
+                                  display: none; /* Hide image by default (on mobile) */
+                                }
+                              
+                                @media (min-width: 768px) {
+                                  .responsive-image1 {
+                                    display: block; /* Show image on medium and larger screens */
+                                  }
+                                }
+                              </style>
+                    
+                        </div>
+                    </div>  
+
+
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-6 mb-4">2024 In-Person LWHRA Symposium</h1>
+                            <P style="text-align: center; color: cornflowerblue;">Tuesday, October 1, 2024</P>
+                            <P style="text-align: center; color: cornflowerblue;">Bellevue Hilton – 300 112 Ave SE Bellevue, WA 98004</P>
+
+                            
+
+                            <p class="text-dark pt-5">Join us at the 2024 LWHRA Symposium, where Alexander-Ali Dalipi, CEO and Founder of HR1Systems, will be a Keynote Speaker. With a topic that resonates deeply in today's data-driven world, Alexander will delve into "Storytelling Through Data Integrity and Data Visualization." </p>
+                            <p class="text-dark">In addition to the insightful session, HR1Systems will host a premium booth at the event. Attendees are encouraged to visit the booth to learn more about HR1Systems' innovative solutions tailored to your business needs.</p>
+                            <h4 class="pb-3">About the 2024 LWHRA Symposium</h4>
+                            <p class="text-dark mb-4">The world of work is evolving and HR is providing critical leadership in this evolution. The 2024 LWHRA symposium will grow your HR leadership and practices by providing you with updated tools, insights, and legal guidance. The time for change is now and organizations are looking for your guidance! Now is the time to invest in yourself and help you support organizational adaptability. </p>
+
+                        </div>
+                    </div> 
+                    <hr style="height:2px;border-width:0;color:gray;background-color:cornflowerblue">
+
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                       <div class="about-item-content bg-white rounded p-5 h-100 responsive-image1">
+                            
+                        <img src="img/wor.png" class="img-fluid w-100 h-50 responsive-image1" alt="">
+
+                            
+                            <style>
+                                .responsive-image1 {
+                                  display: none; /* Hide image by default (on mobile) */
+                                }
+                              
+                                @media (min-width: 768px) {
+                                  .responsive-image1 {
+                                    display: block; /* Show image on medium and larger screens */
+                                  }
+                                }
+                              </style>
+                    
+                        </div>
+                    </div>  
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-5 mb-4">32nd Annual New Jersey Statewide Payroll Conference</h1>
+                            <P style="text-align: center; color: cornflowerblue;">Friday, September 27, 2024</P>
+                            <P style="text-align: center; color: cornflowerblue;">Hilton Garden Inn, 304 Route 22 West Springfield, NJ 07081</P>
+
+                            <h4 class="pt-3">
+                                HR1Systems is proud to be a Sponsor of the Keynote Event of the 32nd Annual New Jersey Statewide Payroll Conference.
+                            </h4>
+
+                            <p class="text-dark pt-5">We are especially excited to sponsor the Keynote Event with guest speaker: 𝗞𝗮𝗽𝗹𝗮𝗻 𝗠𝗼𝗯𝗿𝗮𝘆,who will deliver an inspiring talk on "Excellence is a Choice: Embracing the Power of Change to Elevate Your Impact." </p>
+                            <p class="text-dark">In addition, we are thrilled to announce that Alexander-Ali Dalipi will lead a workshop session titled "Storytelling Through Data Integrity and Data Visualization."  The session will introduce the fundamentals of understanding datasets, data structure, and data integrity for HR professionals. Familiarizing yourself with these basic concepts will allow the professionals to analyze, manipulate, and produce visual presentations of their data in a storytelling format. This begins the journey toward business intelligence analytical reporting to empower HR leaders with the data needed to produce effective decision-making choices.</p>
+                            <p class="text-dark mb-4">Join us at the conference to gain valuable insights and network with industry leaders. Together, let's explore the future of payroll and human resources.</p>
+                            <a class="btn btn-light  py-3 px-5" href="https://www.njstatewidepayrollconf.org/Default.aspx?PageID=Meet%20Our%202024%20Speakers">View Speakers Here</a>
+                            <a class="btn btn-light  py-3 px-5" href="https://www.njstatewidepayrollconf.org/Default.aspx?PageID=2024%20Sponsors%20Vendors">View Sponsors and Vendors Here</a>
+
+
+                        </div>
+                    </div>
+                    <hr style="height:2px;border-width:0;color:gray;background-color:cornflowerblue">
+
+                    <div class="col-md-4 wow ">
+                        <div class="embed-container pt-5" ><iframe src='https://www.youtube.com/watch?v=domg8SlgriI' frameborder='0' allowfullscreen></iframe></div>
+                    </div> 
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-5 mb-4">DisruptHR South Jersey 3.0</h1>
+                            <P style="text-align: center; color: cornflowerblue;">Thursday, May 30 at 5:30pm</P>
+                            <P style="text-align: center; color: cornflowerblue;">The Riverton Country Club, The Pool Cafe – 1416 Highland Ave Cinnaminson, NJ</P>
+
+                            
+
+                            <p class="text-dark pt-5">The future is all about adaption and HR's utilization of AI. Do leaders and professionals have the will power to survive the next evolution of Human Resources? We will ask through-provoking questions that will change the very foundation of who we are as human beings, how we use technology and who we will adapt to rapid changes in technology. Our thesis will be focused on (1) a brief overview of the evolution of HR industry, (2) the pedagogy of HR Learning and (3) Human biology about Will Power.</p>
+                          
+
+                        </div>
+                    </div>  
+                    <hr style="height:2px;border-width:0;color:gray;background-color:cornflowerblue">
+
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                        <div class="embed-container pt-5" ><iframe src='https://youtu.be/2fAFhmsdj8Y?si=WWF7PVdqdjpYy-lR' frameborder='0' allowfullscreen></iframe></div>
+                    </div> 
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-5 mb-4">Summer Symposium Rooftop Happy Hour</h1>
+                            <P style="text-align: center; color: cornflowerblue;">Wednesday, May 29, 2024 - Doors Open @ 5:30pm - Last Call @ 8:30pm</P>
+                            <P style="text-align: center; color: cornflowerblue;">Hotel Chantelle- 92 Ludlow St. New York, NY 10002</P>
+                            <h4 class="text-primary">At this event you can expect to:</h4>
+
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Gain insights into the various factors that are reshaping the HR landscape and influencing the workplace of the future.</p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Discover the role of artificial intelligence (AI), data analytics, and automation in HR, and how these tools can enhance decision-making, and drive employee engagement.</p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Understand the importance of civility—for employees and HR alike!</p>
+                            
+
+                          
+
+                        </div>
+                        <hr style="height:2px;border-width:0;color:gray;background-color:cornflowerblue">
+                    </div>    
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                        <div class="embed-container pt-5" ><iframe src='https://youtu.be/Z7CCTKCUf58?si=5PokPslKZmrWJFZW' frameborder='0' allowfullscreen></iframe></div>
+                    </div> 
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h1 class="display-5 mb-4">Happy Hour and Virtual Golf</h1>
+                            <P style="text-align: center; color: cornflowerblue;">MAY 8, 2024 | 5:00 - 8:00 PM EDT</P>
+                            <P style="text-align: center; color: cornflowerblue;">Golf Lounge 18, Westchester Mall, 125 Westchester Ave, White Plains, NY 10601</P>
+
+                            
+
+                            <p class="text-dark pt-5"> Join us for an exclusive event sponsored by UKG and Earn SHRM and HRCI credits!
+                            </p>
+                            <p class="text-dark">Our CEO Alexander-Ali Dalipi, will guide you through the fundamentals of data within HR. His passionate and effervescent personality will explore this important topic: “Swinging to Spring Cleaning: "The Importance of Data Integrity and Business Intelligence Analytics."
+
+                            </p>
+                            <p class="text-dark mb-4">Get ready to freshen up your HR data and processes while enjoying networking, practical tips & tricks, and swinging clubs in state-of-the-art bays with Trackman 4 Technology.</p>                          
+
+                        </div>
+                    </div>
+                    </div>    
+                </div>
+                
+            </div>
+        </div>
+        <!-- events End -->
+        
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-xl-9">
+                <div class="mb-5">
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-6 col-xl-5">
+                            <div class="footer-item">
+                                <a href="index.html" class="p-0">
+                                    
+                                    <img src="img/HR1 WHITE.ico" style="width: 175px; height: 90px; padding-bottom: 20px;" alt="Logo"> 
+                                </a>
+                                <div class="footer-btn d-flex">
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.facebook.com/profile.php?id=100041166143576"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://twitter.com/HR1Systems"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://instagram.com/hr1systems?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                                    <a class="btn btn-md-square rounded-circle me-0" href="https://www.linkedin.com/company/hr1systems/"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-4">
+                            <div class="footer-item">
+                                <div class="row g-3">
+                                    <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="UKG/UKG Certified Partner - no alt text.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://marketplace.ukg.com/en-US/apps/416471/hr1systems,-llc" data-lightbox="footerInstagram-1" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-4">
+                                        <div class="footer-instagram rounded">
+                                            <img src="UKG/Authorize.png" class="img-fluid w-100" alt="">
+                                            <div class="footer-search-icon">
+                                                <a href="https://verify.authorize.net/anetseal/?pid=4071ecb6-e841-4aaf-b456-f45b5ea04d0c&rurl=https://www.hr1systems.com" data-lightbox="footerInstagram-2" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                   </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3 ">
+                            <div class="footer-item">
+                                <h4 class="text-white mb-4">Useful Links</h4>
+                                <a href="our story.html"><i class="fas fa-angle-right me-2"></i> Our Story</a>
+                                <a href="our story.html"><i class="fas fa-angle-right me-2"></i> Partnerships</a>
+                                <a href="service1.html"><i class="fas fa-angle-right me-2"></i>  Implementation Services</a>
+                                <a href="Speaking events.html"><i class="fas fa-angle-right me-2"></i> Speaking events</a>
+                                <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                    <div class="row g-0">
+                        <div class="col-12">
+                            <div class="row g-4">
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="d-flex">
+                                        <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white">Address</h4>
+                                            <p class="mb-0">Jersey City, NJ 07302 ,USA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="d-flex">
+                                        <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                            <i class="fas fa-envelope fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white">Mail Us</h4>
+                                            <p class="mb-0">info@hr1systems.com</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-xl-4">
+                                    <div class="d-flex">
+                                        <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                            <i class="fa fa-phone-alt fa-2x"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white">Telephone</h4>
+                                            <p class="mb-0">+1 917 473 3545</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xl-3">
+                <div class="footer-item">
+                    
+                    <div class="d-flex flex-shrink-0">
+                        <div class="footer-btn">
+                            <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                <i class="fa fa-phone-alt fa-2x"></i>
+                                <div class="position-absolute" style="top: 2px; right: 12px;">
+                                    <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex flex-column ms-3 flex-shrink-0">
+                            <span>Call to Our Experts</span>
+                            <a href="tel:+1 917 473 3545"><span class="text-white">Free: +1 917 473 3545</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<!-- Copyright Start -->
+<div class="container-fluid copyright py-4">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 text-center text-md-end mb-md-0">
+                <span class="text-body"><a href="https://www.hr1systems.com/" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>HR1Systems</a>, All right reserved.</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+<!-- chatbot -->
+<script> window.chtlConfig = { chatbotId: "2117563134" } </script>
+<script async data-id="2117563134" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>  
+
+
+
+<!-- JavaScript Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

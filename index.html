@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>HR & Payroll Implementation and Optimization for Small and Mid-size Organizations</title>
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="assets/vendors/bootstrap/bootstrap-reboot.min.css" rel="stylesheet" />
+        <link href="assets/vendors/bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+        <link href="assets/vendors/bootstrap/bootstrap-utilities.min.css" rel="stylesheet" />
+        <link href="assets/vendors/owlcarousel/owl.carousel.min.css" rel="stylesheet" />
+        <link href="assets/vendors/nouislider/nouislider.min.css" rel="stylesheet" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Icons -->
+        <link href="assets/fonts/moria-icons/style.css" rel="stylesheet" />
+
+        <!-- Main CSS -->
+        <link href="assets/dist/main.min.css" rel="stylesheet" />
+        <link href="assets/dist/responsive.min.css" rel="stylesheet" />
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="border-end border-primary pe-3">
+                                <a href="https://maps.app.goo.gl/qWF5M6LNWUZWaebE7" class="text-muted small"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
+                            </div>
+                            <div class="ps-3">
+                                <a href="info@hr1systems.com" class="text-muted small"><i class="fas fa-envelope text-primary me-2"></i>info@hr1systems.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-primary pe-3">
+                                <a class="btn p-0 text-primary me-3" href="https://www.facebook.com/profile.php?id=100041166143576"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://twitter.com/HR1Systems"><i class="fab fa-twitter"></i></a>
+                                <a class="btn p-0 text-primary me-3" href="https://instagram.com/hr1systems?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-0" href="https://www.linkedin.com/company/hr1systems/"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light"> 
+                    <a href="index.html" class="navbar-brand p-0">
+                        
+                         <img src="img/HR1 WHITE ON BLUE.png" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">About</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="our story.html" class="dropdown-item">Our story</a>
+                                    <a href="Speaking events.html" class="dropdown-item">Speaking Events</a>
+                                    <a href="our story.html" class="dropdown-item">Partnerships</a>
+                                    <a href="https://hr1systems.zohorecruit.com/jobs/Careers" class="dropdown-item">Careers</a>
+
+                                    
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Services</span>
+                                </a>
+                                <div class="dropdown-menu">    
+                                    <a href="service1.html" class="dropdown-item">Implementation Services</a>
+                                    <a href="service.html" class="dropdown-item">Small Business Solution</a>
+
+                                </div>
+                            </div>    
+                            
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Resources</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="https://councils.forbes.com/profile/Alexander-Ali-Dalipi-CEO-HR1Systems-LLC/1178a87d-0810-4793-838f-fa40e6c64285" class="dropdown-item">Forbes HR Council</a>
+                                    <a href="Lehman college.html" class="dropdown-item">Lehman College</a>
+                                    <a href="Baruch college.html" class="dropdown-item">Baruch College</a>
+                                    
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <div class="nav-btn px-3">
+                                <button class="btn-search btn btn-primary btn-md-square rounded-circle flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                            <i class="fa fa-phone-alt fa-2x"></i>
+                            <div class="position-absolute" style="top: 7px; right: 12px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column ms-3">
+                            <span>Call to Our Experts</span>
+                            <a href="tel:+1 917 473 3545"><span class="text-dark">Free: +1 917 473 3545</span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        
+
+
+        <!-- Carousel Start -->
+    <div class="container-fluid px-0 mb-5">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="img/Homepage_GroupTeam Image.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                   <h1 class="display-1 text-white mb-5 animated slideInRight">We care about your business </h1> 
+                                   <p class="fs-5 fw-medium text-white text-uppercase animated slideInRight">Which is why our philosophy is</br> “Better Implement, Better Tech!”</p>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="img/Homepage_GroupTeam Image.jpg" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-start">
+                                   
+                                    <h1 class="display-1 text-white mb-5 animated slideInRight">Empowering Your Business with Seamless HR and Payroll Solutions</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+        <!-- Feature Start -->
+        <div class="container-fluid feature bg-light py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Our Features</h4>
+                    <h1 class="display-4 mb-4">Powerful, Tailored Solutions for Your HR and Payroll Needs</h1>
+                    <p class="mb-0">Our features are designed to streamline your operations, ensure compliance, and provide valuable insights—all while enhancing employee satisfaction. With seamless integration, advanced analytics, and robust support, our solutions empower your business to thrive in a competitive landscape. </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="far fa-handshake fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">End-to-End Implementation</h4>
+                            <p class="mb-4">We deliver full-service HR and payroll software implementation, tailored to your business needs, ensuring seamless integration with your existing systems.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="fa fa-balance-scale fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">Legal Compliance</h4></br>
+                            <p class="mb-4">Stay compliant with labor laws at every level with automated updates and expert guidance, keeping your payroll and HR practices accurate and up to date.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="fa fa-signal fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">Custom Reports and Data Analytics</h4>
+                            <p class="mb-4">Gain insights through advanced reporting tools, offering custom reports and analytics to help you make informed decisions and optimize workforce management.
+                            </p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="feature-item p-4 pt-0">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="fa fa-users fa-3x"></i>
+                            </div>
+                            <h4 class="mb-4">Empower Your Employees: </h4>
+                            <p class="mb-4">Our intuitive self-service portals enable employees to manage payroll, benefits, and HR information easily, accessible from any device, anytime, anywhere.</p>
+                            <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+        <!-- About Start -->
+        <div class="container-fluid bg-light about pb-5">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    
+                    <div class="col-md-8 wow fadeInLeft px-0 pb-0" data-wow-delay="0.2s">
+
+                        <div class="about-item-content bg-white rounded p-5 h-100">
+                            
+                            <h4 class="text-primary">About Our Company</h4>
+                            <h1 class="display-4 mb-4">Take Human resources to the future!</h1>
+                            <p>
+                                HR1Systems is a full-service client-side implementation and managed services boutique firm specializing in human resources information systems, optimization, and automation, including payroll processing, payroll taxes, tax registration, and systems design and maintenance.
+                                
+                                We provide optimization services for a full suite of human resource capital management operational products, such as recruitment, onboarding, compensation design, benefits administration, performance management, succession planning and learning management software. Our team members are located globally for our USA and International clients.
+                                
+                                Don’t have an HRIS Technology provider? Don’t know how to begin? Not a problem! We are here to support you from the very beginning to well beyond activation.
+                            </p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>We can save your money.</p>
+                            <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>Seamless HR and Payroll Solutions</p>
+                            <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>Exclusive advisory on every aspect of your HR department</p>
+                            <a class="btn btn-primary rounded-pill py-3 px-5" href="our story.html">More Information</a>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 wow fadeInRight ps-0 pt-0" data-wow-delay="0.4s">
+                        <div class="about-item-content bg-white rounded p-5 h-100 responsive-image1">
+
+                            <img src="img/carousel-2.png" class="img-fluid w-100 h-75 responsive-image1" alt="">
+                            <style>
+                                .responsive-image1 {
+                                  display: none; /* Hide image by default (on mobile) */
+                                }
+                              
+                                @media (min-width: 768px) {
+                                  .responsive-image1 {
+                                    display: block; /* Show image on medium and larger screens */
+                                  }
+                                }
+                              </style>
+                    
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- Service Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h4 class="text-primary">Our Services</h4>
+                    <h1 class="display-4 mb-4">Comprehensive Services to Elevate Your Business
+                    </h1>
+                    <p class="mb-0">Our services are crafted to support your business at every stage. From full-service HR and payroll implementation to ongoing support and compliance management, we provide the expertise and tools you need to streamline processes, minimize risks, and optimize performance. Let us partner with you to achieve operational excellence and drive your business forward.</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/4153553.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="service-icon p-3">
+                                    <i class="fa fa-users fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="service-content p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="d-inline-block h4 mb-4">HR Assessment
+                                    </a>
+                                    <p class="mb-4">Exclusive advisory on every aspect of your HR department. From Application Tracking System, Onboarding, Payroll & Benefits platform, Performance Management & Learning Management System.</br></br></p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/20943761.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="service-icon p-3">
+                                    <i class="fa fa-desktop fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="service-content p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="d-inline-block h4 mb-4">Systems Implementation</a>
+                                    <p class="mb-4">Data migration, integration and full systems testing to ensure all information is accurately and efficiently transferred from the legacy system to new HRIS software. </p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="img/5144820.jpg" class="img-fluid rounded-top w-100" alt="">
+                                <div class="service-icon p-3">
+                                    <i class="fa fa-id-badge fa-2x"></i>
+                                </div>
+                            </div>
+                            <div class="service-content p-4">
+                                <div class="service-content-inner">
+                                    <a href="#" class="d-inline-block h4 mb-4">Training & Managed Services</a>
+                                    <p class="mb-4">Post “Go Live” training and support. We provide administrative, management and employee self-service training. In addition, we will continue to offer customer support well beyond the standard. </p>
+                                    <a class="btn btn-primary rounded-pill py-2 px-4" href="service1.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="service1.html">More Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+        
+
+
+
+       
+    
+
+        
+        <!-- FAQs Start -->
+        <div class="container-fluid faq-section bg-light py-5">
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                        <div class="h-100">
+                            <div class="mb-5">
+                                
+                                <h1 class="display-4 mb-0">Customer Reviews For  HR1Systems on Raven Intelligence Ratings </h1>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button border-0" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Q: What is Raven Intelligence Ratings?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show active" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body rounded">
+                                            A: Raven Intelligence is a free, online community to help Enterprise Software customers independently find their perfect Consulting partner.  Raven consolidates the options in a single place–across all major cloud software platforms. It helps customers who are in a software selection process search and engage the best partners. It gives Consultants a place to promote their certifications and cloud project success and find customers looking for what they do best.  While we work closely with software vendors, we have no affiliation, sponsorship or endorsement from them.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight " data-wow-delay="0.4s">
+
+                        <a href="https://ravenintel.com/listing/hr1systems/"><img src="img/ravh.png" class="img-fluid w-75" alt="" style="height: 500px;"></a>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s"></div>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="https://s.ravenpeerreview.com/s3/Enterprise-Partner-Review">Leave a Review</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!--FAQs End --> 
+<!-- Testimonial Start -->
+<div class="container-fluid testimonial   pt-5 pb-5">
+    <div class="container pb-5">
+        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+            <h4 class="text-primary">Our Valued Clients</h4>
+            <h1 class="display-4 mb-4">Showcasing the Brands We Proudly Partner With</h1>
+            <p class="mb-0">At HR1Systems, we are proud to partner with a diverse range of esteemed clients who inspire and challenge us to deliver our best. Our client logo slideshow showcases the logos of some of the remarkable companies we've had the pleasure of working with. This dynamic carousel features the brands that trust our expertise and solutions, reflecting our commitment to excellence and the strong relationships we've built over time.
+
+                Explore the logos to see the companies that make up our vibrant network. Each logo represents a success story and a testament to our collaborative spirit. We are grateful for the opportunity to contribute to their success and look forward to many more partnerships in the future.
+            </p>
+        </div>
+        <div class="logos">
+            <div class="logo_items">
+            <img src="Logo/client/a (1).png">
+            <img src="Logo/client/a (2).png">
+            <img src="Logo/client/a (3).png">
+            <img src="Logo/client/a (4).png">
+            <img src="Logo/client/a (5).png">
+            <img src="Logo/client/a (6).png">
+            <img src="Logo/client/a (7).png">
+            <img src="Logo/client/a (8).png">
+            <img src="Logo/client/a (9).png">
+            <img src="Logo/client/a (10).png">
+            <img src="Logo/client/a (12).png">
+            <img src="Logo/client/a (13).png">
+            <img src="Logo/client/a (14).png">
+            <img src="Logo/client/a (15).png">
+            <img src="Logo/client/a (16).png">
+            <img src="Logo/client/a (17).png">
+            <img src="Logo/client/a (18).png">
+            <img src="Logo/client/a (19).png">
+            <img src="Logo/client/a (20).png">
+            <img src="Logo/client/a (21).png">
+            <img src="Logo/client/a (22).png">
+            <img src="Logo/client/a (23).png">
+            <img src="Logo/client/a (24).png">
+            <img src="Logo/client/a (25).png">
+            <img src="Logo/client/a (26).png">
+            
+            </div>
+              <div class="logo_items">
+                <img src="Logo/client/a (27).png">
+                <img src="Logo/client/a (28).png">
+                <img src="Logo/client/a (29).png">
+                <img src="Logo/client/a (30).png">
+                <img src="Logo/client/a (31).png">
+                <img src="Logo/client/a (32).png">
+                <img src="Logo/client/a (33).png">
+                <img src="Logo/client/a (34).png">
+                <img src="Logo/client/a (35).png">
+                <img src="Logo/client/a (36).png">
+                <img src="Logo/client/a (37).png">
+                <img src="Logo/client/a (38).png">
+                <img src="Logo/client/a (39).png">
+                <img src="Logo/client/a (40).png">
+                <img src="Logo/client/a (41).png">
+                <img src="Logo/client/a (42).png">
+                <img src="Logo/client/a (43).png">
+                <img src="Logo/client/a (44).png">
+                <img src="Logo/client/a (45).png">
+                <img src="Logo/client/a (46).png">
+                <img src="Logo/client/a (47).png">
+                <img src="Logo/client/a (48).png">
+                <img src="Logo/client/a (49).png">
+            
+            </div>
+            </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-xl-9">
+                        <div class="mb-5">
+                            <div class="row g-4">
+                                <div class="col-md-6 col-lg-6 col-xl-5">
+                                    <div class="footer-item">
+                                        <a href="index.html" class="p-0">
+                                            
+                                            <img src="img/HR1 WHITE.ico" style="width: 175px; height: 90px; padding-bottom: 20px;" alt="Logo"> 
+                                        </a>
+                                        <div class="footer-btn d-flex">
+                                            <a class="btn btn-md-square rounded-circle me-3" href="https://www.facebook.com/profile.php?id=100041166143576"><i class="fab fa-facebook-f"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="https://twitter.com/HR1Systems"><i class="fab fa-twitter"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-3" href="https://instagram.com/hr1systems?igshid=MzRlODBiNWFlZA=="><i class="fab fa-instagram"></i></a>
+                                            <a class="btn btn-md-square rounded-circle me-0" href="https://www.linkedin.com/company/hr1systems/"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-4">
+                                    <div class="footer-item">
+                                        <div class="row g-3">
+                                            <div class="col-4">
+                                                <div class="footer-instagram rounded">
+                                                    <img src="UKG/UKG Certified Partner - no alt text.png" class="img-fluid w-100" alt="">
+                                                    <div class="footer-search-icon">
+                                                        <a href="https://marketplace.ukg.com/en-US/apps/416471/hr1systems,-llc" data-lightbox="footerInstagram-1" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                           <div class="col-4">
+                                                <div class="footer-instagram rounded">
+                                                    <img src="UKG/Authorize.png" class="img-fluid w-100" alt="">
+                                                    <div class="footer-search-icon">
+                                                        <a href="https://verify.authorize.net/anetseal/?pid=4071ecb6-e841-4aaf-b456-f45b5ea04d0c&rurl=https://www.hr1systems.com" data-lightbox="footerInstagram-2" class="my-auto"><i class="fas fa-link text-white"></i></a>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-xl-3 ">
+                                    <div class="footer-item">
+                                        <h4 class="text-white mb-4">Useful Links</h4>
+                                        <a href="our story.html"><i class="fas fa-angle-right me-2"></i> Our Story</a>
+                                        <a href="our story.html"><i class="fas fa-angle-right me-2"></i> Partnerships</a>
+                                        <a href="service1.html"><i class="fas fa-angle-right me-2"></i>  Implementation Services</a>
+                                        <a href="Speaking events.html"><i class="fas fa-angle-right me-2"></i> Speaking events</a>
+                                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                            <div class="row g-0">
+                                <div class="col-12">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Address</h4>
+                                                    <p class="mb-0">Jersey City, NJ 07302 ,USA</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fas fa-envelope fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Mail Us</h4>
+                                                    <p class="mb-0">info@hr1systems.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-4">
+                                            <div class="d-flex">
+                                                <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                    <i class="fa fa-phone-alt fa-2x"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="text-white">Telephone</h4>
+                                                    <p class="mb-0">+1 917 473 3545</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xl-3">
+                        <div class="footer-item">
+                            
+                            <div class="d-flex flex-shrink-0">
+                                <div class="footer-btn">
+                                    <a href="#" class="btn btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                                        <i class="fa fa-phone-alt fa-2x"></i>
+                                        <div class="position-absolute" style="top: 2px; right: 12px;">
+                                            <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column ms-3 flex-shrink-0">
+                                    <span>Call to Our Experts</span>
+                                    <a href="tel:+1 917 473 3545"><span class="text-white">Free: +1 917 473 3545</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-end mb-md-0">
+                        <span class="text-body"><a href="https://www.hr1systems.com/" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>HR1Systems</a>, All right reserved.</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- chatbot -->
+        <script> window.chtlConfig = { chatbotId: "2117563134" } </script>
+<script async data-id="2117563134" id="chatling-embed-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>  
+        
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    </body>
+
+</html>
